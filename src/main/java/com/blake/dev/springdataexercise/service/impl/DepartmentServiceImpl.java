@@ -1,7 +1,6 @@
 package com.blake.dev.springdataexercise.service.impl;
 
 import com.blake.dev.springdataexercise.entity.Department;
-import com.blake.dev.springdataexercise.mapper.DepartmentMapper;
 import com.blake.dev.springdataexercise.service.DepartmentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

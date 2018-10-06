@@ -1,4 +1,4 @@
-package com.blake.dev.springdataexercise.mapper;
+package com.blake.dev.springdataexercise.mapper.auto;
 
 import com.blake.dev.springdataexercise.entity.Employee;
 import java.util.List;

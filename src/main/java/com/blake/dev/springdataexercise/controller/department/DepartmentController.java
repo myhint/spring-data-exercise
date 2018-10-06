@@ -1,4 +1,4 @@
-package com.blake.dev.springdataexercise.controller;
+package com.blake.dev.springdataexercise.controller.department;
 
 import com.blake.dev.springdataexercise.entity.Department;
 import com.blake.dev.springdataexercise.service.DepartmentService;
