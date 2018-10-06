@@ -62,17 +62,23 @@ def getDbProperties = {
 }
 
 task('mybatisClean') {
-    doLast {
-        delete(
-                "${projectDir}/src/main/java/com/blake/dev/springdataexercise/entity",
-                "${projectDir}/src/main/java/com/blake/dev/springdataexercise/mapper/auto",
-                "${projectDir}/src/main/resources/mapper/auto"
-        )
+
+    description 'remove the generated code before execute the task named mybatisGenerate'
+    println(description)
+
+    delete(
+            "${projectDir}/src/main/java/com/blake/dev/springdataexercise/entity",
+            "${projectDir}/src/main/java/com/blake/dev/springdataexercise/mapper/auto",
+            "${projectDir}/src/main/resources/mapper/auto"
+    )
 //    followSymlinks = true
-    }
 }
 
-task mybatisGenerate {
+task mybatisGenerate(dependsOn: mybatisClean) {
+
+    description 'generate code example of mybatis'
+    println(description)
+
     def properties = getDbProperties()
     ant.properties['targetProject'] = projectDir.path
     ant.properties['driverClass'] = properties.getProperty("jdbc.driverClassName")
